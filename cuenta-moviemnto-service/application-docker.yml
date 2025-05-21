@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/banco
+    username: postgres
+    password: admin123
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: user
+    password: password
