@@ -42,7 +42,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"numeroCuenta\": \"585545\",\r\n  \"tipoCuenta\": \"Corriente\",\r\n  \"saldoInicial\": 1000.00,\r\n  \"estado\": true,\r\n  \"clienteId\": \"1725489632\"\r\n}",
+							"raw": "{\r\n  \"numeroCuenta\": \"585577\",\r\n  \"tipoCuenta\": \"Corriente\",\r\n  \"saldoInicial\": 1000.00,\r\n  \"estado\": true,\r\n  \"clienteId\": \"1723721484\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -232,7 +232,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"clienteId\": \"CLI001\",\r\n  \"contrasena\": \"1234\",\r\n  \"estado\": true,\r\n  \"persona\": {\r\n    \"identificacion\": \"1725489632\",\r\n    \"nombre\": \"Jose Lema\",\r\n    \"genero\": \"Masculino\",\r\n    \"edad\": 30,\r\n    \"direccion\": \"Otavalo sn y principal\",\r\n    \"telefono\": \"098254785\"\r\n  }\r\n}\r\n",
+							"raw": "{\r\n  \"clienteId\": \"CLI009\",\r\n  \"contrasena\": \"1234\",\r\n  \"estado\": true,\r\n  \"persona\": {\r\n    \"identificacion\": \"1719453478\",\r\n    \"nombre\": \"Carla Noboa\",\r\n    \"genero\": \"Femenino\",\r\n    \"edad\": 34,\r\n    \"direccion\": \"Quitumbe\",\r\n    \"telefono\": \"098254785\"\r\n  }\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -263,12 +263,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8081/api/clientes",
+							"raw": "http://localhost:8080/api/clientes",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8081",
+							"port": "8080",
 							"path": [
 								"api",
 								"clientes"
