@@ -2,6 +2,8 @@ package com.ejemplo.cuentamovimiento.infrastructure.controller;
 
 import com.ejemplo.cuentamovimiento.application.CuentaService;
 import com.ejemplo.cuentamovimiento.domain.Cuenta;
+import com.ejemplo.cuentamovimiento.dto.CuentaDTO;
+import com.ejemplo.cuentamovimiento.mapper.CuentaMapper;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,19 +13,26 @@ import java.util.List;
 public class CuentaController {
 
     private final CuentaService service;
+    private final CuentaMapper mapper;
 
-    public CuentaController(CuentaService service) {
+    public CuentaController(CuentaService service, CuentaMapper mapper) {
         this.service = service;
+        this.mapper = mapper;
     }
 
     @PostMapping
-    public Cuenta crearCuenta(@RequestBody Cuenta cuenta) {
-        return service.crearCuenta(cuenta);
+    public CuentaDTO crear(@RequestBody CuentaDTO dto) {
+        Cuenta cuenta = mapper.toEntity(dto);
+        Cuenta creada = service.crearCuenta(cuenta);
+        return mapper.toDto(creada);
     }
 
     @GetMapping
-    public List<Cuenta> listarCuentas() {
-        return service.obtenerCuentas();
+    public List<CuentaDTO> listar() {
+        return service.obtenerCuentas()
+                .stream()
+                .map(mapper::toDto)
+                .toList();
     }
 
     @GetMapping("/{numeroCuenta}")
