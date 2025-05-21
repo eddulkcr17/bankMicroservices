@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/cliente-persona-service/pom.xml" />
         <option value="$PROJECT_DIR$/cuenta-moviemnto-service/pom.xml" />
+        <option value="$PROJECT_DIR$/api-gateway/pom.xml" />
       </list>
     </option>
   </component>
