@@ -11,6 +11,8 @@ spring:
       ddl-auto: update
     show-sql: true
 
-rabbitmq:
-  host: localhost
-  port: 5672
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: password
